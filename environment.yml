@@ -1,0 +1,14 @@
+name: LocPro
+dependencies:
+  - python=3.8
+  - pip
+  - numpy
+  - pandas<2.0.0
+  - scikit-learn
+  - pip:
+    - torch
+    - fair-esm
+    - profeatpy
+    - wget
+    - tqdm
+    - fasta

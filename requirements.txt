@@ -1,0 +1,9 @@
+numpy
+pandas<2.0.0
+scikit-learn
+torch
+fair-esm
+profeatpy
+wget
+tqdm
+fasta
