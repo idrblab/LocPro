@@ -166,7 +166,7 @@ def getInference(input_fasta, output_folder, plk_name='features.pkl'):
     Prepare the input FASTA file, generate features, and perform inference.
     """
     # Generate ESM2 and PROF features for the input FASTA
-    esm2_df = generate_esm2_dataframe(input_fasta, f"{output_folder}/esm2", batch_size=3)
+    esm2_df = generate_esm2_dataframe(input_fasta, f"{output_folder}/esm2")
     profeat_df = generate_profeat_dataframe(input_fasta, f"{output_folder}/profeat")
     # Merge features and save to a pickle file
     final_df = pd.merge(profeat_df, esm2_df, on="Proteins", how="inner")

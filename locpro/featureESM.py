@@ -114,7 +114,7 @@ def process_esm2(input_fasta, feature_path, model, alphabet, batch_converter, ba
         results_dict = defaultdict(list)
         # Process sequences in chunks of 2000 tokens
         for start in range(0, max_length, splitLength):
-            sub_batch = [(protein_id, seq[start : start + 2000]) for protein_id, seq in batch]
+            sub_batch = [(protein_id, seq[start : start + splitLength]) for protein_id, seq in batch]
             batch_labels, sequence_representations = compute_sequence_representations(
                 model, sub_batch, batch_converter, alphabet
             )
